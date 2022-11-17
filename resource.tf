@@ -10,7 +10,7 @@ resource "aws_subnet" "subnet-main" {
     cidr_block = var.subnet_details.cidr_block
     availability_zone = var.subnet_details.az
     tags = {
-      "Name" = var.subent_details.names
+      "Name" = var.subnet_details.names
 
     }
   
