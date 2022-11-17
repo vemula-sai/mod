@@ -6,7 +6,7 @@ variable "vpc_details" {
   
 }
 
-variable "subent_details" {
+variable "subnet_details" {
     type = object ({
         cidr_block = list(string)
         az = list(string)
