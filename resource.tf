@@ -7,10 +7,11 @@ resource "aws_vpc" "vpc-main" {
 
 resource "aws_subnet" "subnet-main" {
     count = length(var.subnet_details.cidr_block )
-    cidr_block = var.subnet_details.cidr_block
-    availability_zone = var.subnet_details.az
+    cidr_block = var.subnet_details.cidr_block[count.index]
+    availability_zone = var.subnet_details.az[count.index]
     tags = {
-      "Name" = var.subnet_details.names
+      "Name" = var.subnet_details.names[count.index]
+      
 
     }
   
